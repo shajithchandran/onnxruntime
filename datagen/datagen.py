@@ -20,13 +20,13 @@ def boston_data():
     y=pd.Series(boston.target)
     data = np.concatenate((X,y[:,None]),axis=1)
     np.savetxt('../data/boston.csv', data, delimiter= ",")
-    print("Saved the data to boston.csv file")
+    print("Saved the data to ../data/boston.csv file")
 
 def mc_data(samples=1000, features=12):
     X, y = make_classification(n_samples=samples, n_features=features, n_informative=6, random_state=1)
     data = np.concatenate((X, y[:,None]), axis=1)
     np.savetxt('../data/mc.csv', data, delimiter= ",")
-    print("Saved the data to mc.csv file")
+    print("Saved the data to ../data/mc.csv file")
 
 
 
